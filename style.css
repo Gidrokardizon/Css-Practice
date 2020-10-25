@@ -1,40 +1,155 @@
-
-body {
-  background: #222;
-  padding-top: 5em;
-  display: flex;
-  justify-content: center;
-    align-items: center;
+.content{
+    margin-left: 350px;
+    font-family: 'Pacifico', cursive;
+    color:white;
+    font-size:30px;
+}
+.h1{
+    margin-left: 10px;
+}
+.css{
+    margin-right: 1250px;
+    margin-top: -20px;
 
 
 
 }
-
-
-.typewriter h1 {
-  font-size: 18px;
-justify-content: center;
-  align-items:center;
-  color: #fff;
-  font-family: 'Balsamiq Sans', cursive;
-  overflow: hidden;
-  border-right: .15em solid orange;
-  white-space: nowrap; /
-  margin: 0 auto;
-  letter-spacing: 1px;
-  animation:
-            typing 4.5s steps(60, end),
-            blink-caret .5s step-end infinite;
+footer{
+    width: 100%;
+   position: fixed;
+    background: black;
+    margin: 0 0;
+    text-align: center;
+    padding-top: 15px;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    z-index: ;
 }
 
-/* Эффект машинки */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+
+
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  }
+
+html, body {
+  height: 100%;
+  }
+  body {
+
+    background-color: hsla(230,40%,50%,1);
+    }
+  body:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    margin-left: 20px;
+    }
+
+h1 {
+
+  display: inline-block;
+  color: white;
+  font-family: 'Righteous', serif;
+  font-size: 12em;
+  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+  }
+  h1:after {
+    content: attr(data-shadow);
+    position: absolute;
+    top: .06em; left: .06em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        hsla(48,20%,90%,1) 45%,
+        hsla(48,20%,90%,1) 55%,
+        transparent 0
+        );
+    background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shad-anim 15s linear infinite;
+    }
+
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }
+
+
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #e0e0e0;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+}
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #337ab7;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes preloader-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+.loaded_hiding .preloader {
+  transition: 1.3s opacity;
+  opacity: 0;
+}
+.loaded .preloader {
+  display: none;
 }
 
-/* "Эффект курсора " */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
 
+.elfsight-app-58d43937-09b6-4408-9e10-acbd68445ff1{
+  display: block;
+}
