@@ -3,6 +3,8 @@
  <head>
   <meta charset="utf-8" />
 
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 
@@ -11,10 +13,41 @@
  </head>
  <body>
 
-<div class="typewriter">
-  <h1>
-Добрий день Денис Володимирович,я радий вітати Вас на моєму сайті, де я демонструю свої навички та знання Css, на прикладi даного тексту.</h1>
+
+<h1 data-shadow='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Practice' class="h1">Css/ </h1>
+<br><br><br><br><br><br><br><br><br>
+<content class="content">
+    Дана сторінка зроблена для перевірки навичок Css
+</content>
+
+<footer>
+
+<h1 class="css" data-shadow='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Practice'>Css/ </h1>
+
+</footer>
+
+
+
+<div class="preloader">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
 </div>
+    <script>
+  window.onload = function () {
+    document.body.classList.add('loaded');
+  }
+</script>
+ <script>
+  window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 500);
+  }
+</script>
 
  </body>
 </html>
